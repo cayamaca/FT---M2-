@@ -3,6 +3,18 @@
 .home {
 
   .intro {
+    img {
+      margin-top: 1rem;
+      border-radius: 2rem;
+      width: 100%;
+
+      @media @phone {
+        width: calc 100% - 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+
+      }
+    }
 
     h2 {
       padding: 15px;
@@ -24,7 +36,16 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+
     }
+    
+
+    @media @phone {
+      .tecnologia,.ondas {
+        display: none;
+      
+    }
+}
   }
 
   .musica-nueva {
@@ -58,6 +79,20 @@
       }
 
       .btn {
+        .btn-mixin(@btn-bg-color, @wild-sand);
+        //background-color: @btn-bg-color;
+        //color:@wild-sand;
+        width: Fit-content;
+        padding: 1.25rem;
+        font-size: 1.5rem;
+        border-radius: 1rem;
+
+        &:hover {
+          cursor: pointer;
+          background-color: @river-bend;
+        }
+
+
       }
     }
 
